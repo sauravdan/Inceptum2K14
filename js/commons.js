@@ -1,3 +1,6 @@
+//ignore errors
+window.onerror = function (mesg, url, num) {;return true;}
+
 QueryLoader.init();
 
 $(document).ready(function () {
@@ -10,7 +13,7 @@ $("img.lazy").lazyload();
 
 	var height = $(window).height(),
 		width = $(window).width(),
-		pages = ["intro", "video", "presentation", "timeline", "works", "team", "thoughts", "contact"],
+		pages = ["intro", "works","timeline","presentation", "team", "thoughts"],
 		currentPage = 0,
 		links,
 		venues = [];
@@ -25,54 +28,12 @@ if(width>400){
 	map();
 }
 
-$.ajax({
-  type: "POST",
-  url: "xml.php",
-	 dataType: "xml",
-  success: function(xml) {
-    var i =1;
-    $(xml).find('item').each(function(){
-
-      var myDate = new Date($(this).children("pubDate").text());
-      var date = myDate.getDate()+"."+ myDate.getMonth()+"."+ myDate.getFullYear();
-      var el = $(".articles .post-"+i);
-
-      el.children(".post-title").html($(this).children("title").text());
-      el.children(".post").html($(this).children("description").text());
-      el.children(".button").children('a').attr("href",$(this).children("link").text());
-
-      if(i==4){
-        return false;
-	    }
-	    i++;
-	  });
-	}
-});
-
 $('#elements').jScrollPane({
 	showArrows: true
 }).bind('mousewheel', function(e){
    e.preventDefault();
 });
 $('#elements').data('jsp').scrollToX(2000);
-
-var url='/tweets.json';
-
-$.getJSON(url,function(tweet){
-	for(var i=0;i<2;i++){
-		if(i==0){
-			var num = "first-child";
-		}else{
-			var num = "last-child";
-		}
-		$(".twitter li:"+num+" p.tweet").html(tweet[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
-    	return '<a target="_blank" href="'+url+'">'+url+'</a>';
-    }).replace(/\B@([_a-z0-9]+)/ig, function(reply) {
-	  	return  reply.charAt(0)+'<a target="_blank" href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
-	  }));
-	  $('.twitter li:'+num+' p.time').html(relative_time(tweet[i].created_at));
-	}
-});
 
 //**************************************//
 //************ EVENTS ********************//
@@ -112,13 +73,6 @@ $('.logo').on('click',function(){
 	$.scrollTo( '#'+pages[0],500, {axis:'xy'});
 });
 
-$('.nav-arrow .next').on('click',function(){
-	$.scrollTo( '#'+pages[currentPage+1],500, {axis:'xy'});
-});
-
-$('.nav-arrow .prev').on('click',function(){
-	$.scrollTo( '#'+pages[currentPage-1],500, {axis:'xy'});
-});
 
 // Main
 $('#intro h1, #intro .logo, #intro .def').hover(function(){
@@ -224,9 +178,9 @@ function reflow(){
 	$("#navigation .buttons > div").off();
 
 	var menuWidth = parseInt($("#navigation .opacity").css("width"));
-	if(menuWidth>=50){
-		menuWidth = 50;
-		$("#navigation .opacity").css("width",50);
+	if(menuWidth>=80){
+		menuWidth = 80;
+		$("#navigation .opacity").css("width",80);
 	}
 	if(width>400){
 		$.each(pages,function(index,value){
@@ -247,7 +201,6 @@ function reflow(){
 		$("#thoughts .articles li.post-3, #thoughts .articles li.post-4").css({"display":"none"});
 		$("#thoughts .text .follow").css({"margin": "0px 0 3% 10px"});
 		$("#navigation .buttons div div p").css({"overflow":"hidden","margin": "13px 0"});
-
 	}
 
 	// Compute de size of the navigation
@@ -256,13 +209,13 @@ function reflow(){
 	})
 	$('#navigation .buttons > div, .nav-arrow .prev, .nav-arrow .next, #navigation .logo').css({
 		"width" : menuWidth,
-		"height" : menuWidth
+		"height" : menuWidth*0.6
 	});
 	$('#navigation .buttons div').css({
-		"height":menuWidth
+		"height":menuWidth*0.6
 	})
 	$(".nav-arrow .next img, .nav-arrow .prev img").css({
-		"height": menuWidth
+		"height": menuWidth*0.6
 	});
 
 
@@ -300,11 +253,6 @@ function reflow(){
 	}
 	// Intro
 	$('#intro .content').css({"padding-top": (height*0.3)});
-	// Vidéo
-	$('#video .content .video iframe').css({
-		"width": width*0.65,
-		"height": width*0.65/1.76
-	});
 	// Présentation
 	if(height>1000){
 		$('#presentation .svg').css({
@@ -333,12 +281,13 @@ function reflow(){
 
 	// works
 
-	$("#works .works-list li").css("width",width*0.21);
+	$("#works .works-list li").css("width",width*0.315);
 	$("#works-slider").jcarousel({
         scroll: 1,
         initCallback: controlWorks,
         buttonNextHTML: null,
-        buttonPrevHTML: null
+        buttonPrevHTML: null,
+		wrap: 'circular'
     });
 	// Team
 	$('#team .content ul').css({"margin-top": (height*0.2)})
