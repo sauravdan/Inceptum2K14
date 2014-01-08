@@ -1,3 +1,16 @@
+/*::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}*/
 
 .college-logo{
 	position:absolute;
@@ -9,22 +22,92 @@
 	height:80px;
 	z-index:1000;
 }
+.header-logo{
+	position:absolute;
+	float:left;
+	left:80px;
+	top:0px;
+	background:rgba(0,255,0,0.5);
+	height:150px;
+	width:100%;
+	z-index:1000;
+}
+.home-box{
+	position:absolute;
+	overflow:visible;	
+	float:bottom;
+	top:175px;
+	left:130px;
+	right:50px;
+	bottom:115px;
+	background:rgba(0,0,0,0);
+	border:1px solid #f00;
+	border-radius:10px;
+	padding:2% 2% 2% 2%;
+}
+.home-box .left-box{
+	position:relative;
+	height:100%;
+	float:left;
+	width:74%;
+	background:rgba(255,255,255,0.2);
+}
+
+.home-box .right-box{
+	position:relative;
+	float:right;
+	height:100%;
+	width:24%;
+	background:rgba(255,255,255,0.2);
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+.styleScroll::-webkit-scrollbar {
+    width: 12px;
+}
+.styleScroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+} 
+.styleScroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
 .sponsors-strip{
 	position:absolute;
 	float:bottom;
-	bottom:0px;
+	bottom:10px;
 	height:80px;
-	left:80px;
-	right:4%;
-	background:rgba(255,255,255,0.5);
+	left:130px;
+	right:50px;
+	border:1px solid #f00;
+	background:rgba(255,255,255,0.01);
+	border-radius:10px;
+	
 }
 
-#jaaduPage{
-	position:relative;
-	width:100%;
-	background:rgba(0,0,0,0.0);
+
+.social-box{
+	position:fixed;
+	z-index:100;
+	float:bottom;
+	right:0px;
+	bottom:0px;
+	width:40px;
+	height:40px;
+	background:rgba(255,0,0,0.6);
+}
+.social-box:hover{
+	transform-origin:100% 100%;
+	-webkit-transform-origin:100% 100%;
+	-moz-transform-origin:100% 100%;
+	
+	-moz-transform:scale(2);
+	-webkit-transform:scale(2);
+	transform:scale(2);
 }
 
-.event-cat{
+.eventCat{
 	cursor:pointer;
 }
