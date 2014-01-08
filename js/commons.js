@@ -17,7 +17,7 @@ $("img.lazy").lazyload();
 		currentPage = 0,
 		links,
 		venues = [];
-
+	
 	if((width>400)&&(width<height)){
 		$('#container').css({"display":"none"});
 		$('#orientation').css({"display":"block"});
@@ -64,8 +64,9 @@ function resizeend(){
 
 }
 
-$(window).bind("scroll",function () {
+$(window).scroll(function () {
 	//currentPage = Math.round($(window).scrollTop()/height);
+	
 })
 
 // Menu
