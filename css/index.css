@@ -1,0 +1,24 @@
+
+.college-logo{
+	position:absolute;
+	float:right;
+	right:20px;
+	top:20px;
+	background:rgba(255,255,255,0.5);
+	width:80px;
+	height:80px;
+	z-index:1000;
+}
+.sponsors-strip{
+	position:absolute;
+	float:bottom;
+	bottom:0px;
+	height:80px;
+	left:80px;
+	right:4%;
+	background:rgba(255,255,255,0.5);
+}
+
+.event-cat{
+	cursor:pointer;
+}

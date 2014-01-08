@@ -44,7 +44,7 @@ var timeout = false;
 var delta = 200;
 
 // Update
- $(window).on('resize',function() {
+ $(window).resize(function() {
 	 rtime = new Date();
     if (timeout === false) {
         timeout = true;
@@ -64,12 +64,12 @@ function resizeend(){
 
 }
 
-$(window).on("scroll",function () {
-	currentPage = Math.round($(window).scrollTop()/height);
+$(window).bind("scroll",function () {
+	//currentPage = Math.round($(window).scrollTop()/height);
 })
 
 // Menu
-$('.logo').on('click',function(){
+$('.logo').click(function(){
 	$.scrollTo( '#'+pages[0],500, {axis:'xy'});
 });
 
@@ -175,7 +175,6 @@ $(".button-credits").hover(function(){
 
 function reflow(){
 	// On coupe les events
-	$("#navigation .buttons > div").off();
 
 	var menuWidth = parseInt($("#navigation .opacity").css("width"));
 	if(menuWidth>=80){
@@ -209,16 +208,14 @@ function reflow(){
 	})
 	$('#navigation .buttons > div, .nav-arrow .prev, .nav-arrow .next, #navigation .logo').css({
 		"width" : menuWidth,
-		"height" : menuWidth*0.6
+		"height" : menuWidth*0.8
 	});
 	$('#navigation .buttons div').css({
-		"height":menuWidth*0.6
+		"height":menuWidth*0.8
 	})
 	$(".nav-arrow .next img, .nav-arrow .prev img").css({
-		"height": menuWidth*0.6
+		"height": menuWidth*0.8
 	});
-
-
 	$(".nav-arrow .next img, .nav-arrow .prev img").hover(function(){
 		$(this).css({
 			"margin-left" : -1*menuWidth
@@ -240,7 +237,7 @@ function reflow(){
 		}, 300);
 	});
 
-	$('#navigation .buttons > div').on("click",function(){
+	$('#navigation .buttons > div').click(function(){
 		$.scrollTo('#'+$(this).attr('class').split(' ')[0],500, {axis:'xy'});
 	});
 
