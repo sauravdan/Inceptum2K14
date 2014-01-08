@@ -140,7 +140,7 @@ li {list-style:none;}
 #navigation .logo img {vertical-align:middle;}
 
 #navigation .opacity {opacity:0.2;filter:alpha(opacity=20);background-color:#000;position:absolute;width:100px;top:0;bottom:0;zoom: 1}
-#navigation .buttons {position:fixed;bottom:80px;left:0;}
+#navigation .buttons {position:fixed;top:20%;left:0;}
 #navigation .buttons > div {height:4%;position:relative;color:#FFF;font-family:Knockout;font-size:22px;}
 #navigation .buttons div > p {margin:0;padding: 0 40%;overflow:hidden;cursor:pointer;position:absolute;z-index:9999;top:25%;}
 #navigation .buttons div div {left:-200px;width:190px;color:#FFF;text-transform:uppercase;position:absolute;height:4.2%;top:0;z-index:40;}
