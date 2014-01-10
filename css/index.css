@@ -14,7 +14,7 @@
 
 .college-logo{
 	background:url(../img/college-logo.png) no-repeat;
-	background-size:cover;
+	background-size:contain;
 	position:absolute;
 	float:right;
 	right:10px;
@@ -170,50 +170,71 @@
 	z-index:1000;
 }
 
+.menuAll{
+	cursor:pointer !important;
+	display:inline-block;
+	position:relative;
+	height:52px !important;
+	width:80px !important;
+	z-index:99999;
+	background-position-x: 20px !important;
+	left:-30px;
+	text-align:right;
+}
+.menuAll:hover{
+	-webkit-transform:translateX(20px);
+}
 .menuHome{
-	background:url(../img/home.png);
-	background-size:cover;
+	background:url(../img/home.png) no-repeat;
+	background-size:contain;
+	background-color:#069ad5 !important;
 }
 .menuHome:hover{
-	background:url(../img/home_b.png);
-	background-size:cover;
-	-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
+	background:url(../img/home_b.png) no-repeat;
+	z-index:0;
+	display:inline-block;
+	background-size:contain;
+	/*-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));*/
 }
 .menuEvents{
-	background:url(../img/events.png);
-	background-size:cover;
+	background:url(../img/events.png) no-repeat;
+	background-size:contain;
+	background-color:#eb9605 !important;
 }
 .menuEvents:hover{
-	background:url(../img/events_b.png);
--webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
-	background-size:cover;
+	background:url(../img/events_b.png) no-repeat;
+/*-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));*/
+	background-size:contain;
 }
 .menuSchedule{
-	background:url(../img/schedule.png);
-	background-size:cover;
+	background:url(../img/schedule.png) no-repeat;
+	background-size:contain;
+	background-color:#fc5215 !important;
 }
 .menuSchedule:hover{
-	background:url(../img/schedule_b.png);
--webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
-	background-size:cover;
+	background:url(../img/schedule_b.png) no-repeat;
+/*-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));*/
+	background-size:contain;
 }
 .menuGallery{
-	background:url(../img/gallery.png);
-	background-size:cover;
+	background:url(../img/gallery.png) no-repeat;
+	background-size:contain;
+	background-color:#30b71d !important;
 }
 .menuGallery:hover{
-	background:url(../img/gallery_b.png);
--webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
-	background-size:cover;
+	background:url(../img/gallery_b.png) no-repeat;
+/*-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));*/
+	background-size:contain;
 }
 .menuReachus{
-	background:url(../img/reachus.png);
-	background-size:cover;
+	background:url(../img/reachus.png) no-repeat;
+	background-size:contain;
+	background-color:#3cb5a2 !important;
 }
 .menuReachus:hover{
-	background:url(../img/reachus_b.png);
--webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
-	background-size:cover;
+	background:url(../img/reachus_b.png) no-repeat;
+/*-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));*/
+	background-size:contain;
 }
 
 .ThreeDee {

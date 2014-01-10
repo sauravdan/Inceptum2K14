@@ -53,6 +53,7 @@
 		$(document).ready(function(){
 			$("#loadingPage").hide();
 			
+			
 			$(".main").onepage_scroll({
 			   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
 			   easing: "cubic-bezier(0.175, 0.885, 0.420, 1.310)", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
@@ -87,6 +88,11 @@
 			});
 			
 			$(".tlt").textillate({loop: true});
+			$(".dateTitle").textillate({
+				loop: true,
+				in: { effect: 'flip',delayScale: 1.5 },
+				out:{ effect: 'flip' ,delayScale: 1.5}
+				});
 			
 		});
 	  </script>
@@ -97,19 +103,19 @@
 	  
 	  <ul class="onepage-pagination">
         <li>
-                <a data-index="1" href="#1" class="active menuHome"></a>
+                <a data-index="1" href="#1" class="menuAll active menuHome"></a>
         </li>
         <li>
-                <a data-index="2" href="#2" class="menuEvents"></a>
+                <a data-index="2" href="#2" class="menuAll menuEvents"></a>
         </li>
         <li>
-                <a data-index="3" href="#3" class="menuSchedule"></a>
+                <a data-index="3" href="#3" class="menuAll menuSchedule"></a>
         </li>
         <li>
-                <a data-index="4" href="#4" class="menuGallery"></a>
+                <a data-index="4" href="#4" class="menuAll menuGallery"></a>
         </li>
         <li>
-                <a data-index="5" href="#5" class="menuReachus"></a>
+                <a data-index="5" href="#5" class="menuAll menuReachus"></a>
         </li>
 	  </ul>
 
@@ -162,71 +168,6 @@
       <div id="main" role="main">
      
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       <div class="social-box"></div>
       <!-- Page 1 start -->
 	  <!--Home Page-->
@@ -249,7 +190,7 @@
 		<div class="divshad" style="background:url(img/slider-background.jpg);background-size:cover;-webkit-filter:opacity(0.4);top:100px;bottom:100px;width:100%;position:fixed;z-index:2">
 			</div-->
          <div class="content" style="z-index:3">
-			<div id="hexaflip-demo1" class="demo" style="position:fixed;top:100px;left:15%;"></div>
+			<div id="hexaflip-demo1" class="demo" style="position:fixed;top:100px;left:15%;"><h2 class="dateTitle" style="position:fixed;top:-50px;right:0px;color:#000;">30th-31st January</h2></div>
 			<div id="hexaflip-demo2" class="demo" style="position:fixed;top:250px;left:33%;"></div>
 			
 			<!--div class="ThreeDee">ιηςερτμϻ</div> --κɱՁƙ1Ч-->
