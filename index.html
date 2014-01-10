@@ -20,32 +20,138 @@
       
 	  <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/onepage-scroll.css">
       <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-	  
+	  <link rel="stylesheet" href="css/impulseslider.css" type="text/css" media="screen"/>
+	  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen"/>
+		<link href="css/hexaflip.css" rel="stylesheet" type="text/css">
+        <link href="css/demo.css" rel="stylesheet" type="text/css">
       
-	  <script src="js/libs/jquery-1.6.2.min.js"></script>
+	  <script src="js/libs/jquery.js"></script>
 	  <script src="js/libs/modernizr-2.0.6.min.js"></script>
 	  <script src="js/queryLoader.js"></script>  
 	  <script src="js/plugins.js"></script>  
-	  <script defer src="js/commons.js"></script>
-	  <script defer src="js/index.js"></script>  
 	  <script defer src="js/en.js"></script>
 	  <script defer src="js/jquery.transit.min.js"></script>
+	  <script defer src="js/commons.js"></script>
+	  <script defer src="js/jquery.onepage-scroll.js"></script>
+	  <script defer src="js/waypoints.js"></script>  
+	  <script defer src="js/jquery.impulse.slider-0.3.js"></script> 
+	  <script defer src="js/hexaflip.js"></script>  
+	  <script defer src="js/index.js"></script>  
 	  
 	  <script>
 	  //ignore errors
 	  window.onerror = function (mesg, url, num) {;return true;}
-
+		
 		$(document).ready(function(){
 			$("#loadingPage").hide();
+			
+			$(".main").onepage_scroll({
+			   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+			   easing: "cubic-bezier(0.175, 0.885, 0.420, 1.310)", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+			   animationTime: 1000, // AnimationTime let you define how long each section takes to animate
+			   pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
+			   updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+			   beforeMove: function(index) {}, // This option accepts a callback function. The function will be called before the page moves.
+			   afterMove: function(index) {}, // This option accepts a callback function. The function will be called after the page moves.
+			   loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+			   responsiveFallback: true // You can fallback to normal page scroll by defining the width of the browser in which you want the responsive fallback to be triggered. For example, set this to 600 and whenever the browser's width is less than 600, the fallback will kick in.
+			});
+			
+			
+				
+			$('#slider').impulseslider({
+				height: 400,
+				width: 300,
+				depth: 300/1.09,
+				perspective: 2800,
+				pauseTime: 1500,
+				transitionDuration: 1000,
+				transitionEffect: "ease-in-out",
+				autostart: true,
+				rightSelector: ".right",
+				leftSelector: ".left",
+				pauseSelector: ".pause",
+				directionRight: true,
+				containerSelector: "#slider-container",
+				spinnerSelector: "#slider",
+				images: ["3dbox/face(1).jpg","3dbox/face(2).jpg","3dbox/face(3).jpg","3dbox/face(4).jpg","3dbox/face(5).jpg"],
+				imageDivClasses: ["face"]
+			});
+			
 		});
 	  </script>
    </head>
-   <body style="overflow-x: hidden;">
+   <body style="overflow-x: hidden;background:url(img/body-bg.jpg) repeat;">
 		<div id="loadingPage" style="position:fixed;background:#000;width:100%;height:100%;font-size:50px;text-align:center;z-index:100000;line-height:600px;">LOADING...</div>
       <div id="QOverlay"></div>
-      <div id="container">
+	  
+	  <ul class="onepage-pagination">
+        <li>
+                <a data-index="1" href="#1" class="active menuHome"></a>
+        </li>
+        <li>
+                <a data-index="2" href="#2" class="menuEvents"></a>
+        </li>
+        <li>
+                <a data-index="3" href="#3" class="menuSchedule"></a>
+        </li>
+        <li>
+                <a data-index="4" href="#4" class="menuGallery"></a>
+        </li>
+        <li>
+                <a data-index="5" href="#5" class="menuReachus"></a>
+        </li>
+	  </ul>
+
+	  
+	  <!--
+      <div id="navigation">
+		 
+            <div class="opacity"></div>
+            <div class="logo"><img src="img/big-logo.png" title="Inceptum Logo"/></div>
+            <div class="buttons">
+               <div class="intro page">
+                  
+                <img class="imagemenu" src="img/home.png"/>                       
+                  <div>
+                     <p>HOME</p>
+                  </div>
+               </div>
+               <div class="works page">
+                  <img class="imagemenu" src="img/events.png"/>
+                  <div>
+                     <p>EVENT</p>
+                  </div>
+               </div>
+               <div class="timeline page">
+                  <img class="imagemenu" src="img/schedule.png"/>
+                  <div>
+                     <p>SCHEDULE</p>
+                  </div>
+               </div>
+               <div class="presentation page">
+                  <img class="imagemenu" src="img/gallery1.png"/>
+                  <div>
+                     <p>GALLERY</p>
+                  </div>
+               </div>
+			   
+               <div class="thoughts page">
+                  <img class="imagemenu" src="img/reachus.png"/>
+                  <div>
+                     <p>REACH US</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      -->
+	  
+	  
+	  
+	  <div id="container" class="main" >
       <div id="main" role="main">
      
       
@@ -118,50 +224,35 @@
       <!-- Page 1 start -->
 	  <!--Home Page-->
 	  
-       <div id="intro">                                   
-         <div class="content">
-		 
-			<div class="header-logo"></div>
-            <div class="college-logo"></div>
+       <section id="intro">
+		<div style="-webkit-filter: opacity(0.05);background:url(img/mattrix.gif) repeat;position:fixed;top:0%;left:0%;width:100%;height:100%;">
+		</div>
+		<div style="background:rgba(0,0,0,0.5);position:fixed;top:0%;left:0%;width:100%;height:100%;">
+		</div>
+		<div class="divshad" style="background:url(img/slider-background.jpg);background-size:cover;-webkit-filter:opacity(0.4);top:100px;bottom:100px;width:100%;position:fixed;z-index:2">
+			</div>
+         <div class="content" style="z-index:3">
+			<div id="hexaflip-demo1" class="demo" style="position:fixed;top:5px;left:120px;"></div>
+			<!--div class="ThreeDee">ιηςερτμϻ</div> --κɱՁƙ1Ч-->
+			<div class="college-logo"></div>
 			
-			<div class="home-box">
-				<div class="left-box">
-					<div class="logo"><img src="img/big-logo.png" title="Inceptum"></div>
-					<h1>Inceptum is a start-up company<br />designing<span> interactive data visualization *</span></h1>
-					
-				</div>
-				<div class="right-box styleScroll">
-					lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem   lepsum lo lorem                  lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo lorem lepsum lo 
+			<div id="slider-container" style="position:fixed;top:50px;left:40%;z-index:4;">
+				<div id="slider">
+				   <!-- to be populated by the plugin-->
 				</div>
 			</div>
 			
+			
 			<div class="sponsors-strip"></div>
          </div>
-      </div>
+      </section>
      
-        
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+         
       
       <!-- page 5 starts here -->
 	  <!--Events page-->
 	  
-            <div id="works">                                           
+      <section id="works">                                           
                <div class="content">
                   <hr />
                   <div class="text">
@@ -208,249 +299,91 @@
                      </ul>
                   </div>
                </div>
-            </div>
+            </section>
             <!--page 5 ends here -->
             
-            
-			
-			
-			
-			
-			
-			
-			
-			
-      <div id="timeline">                               <!-- Page 4 starts here -->
-      <div class="content">
-      <hr />
-      <div class="text clearfix">
-         <p class="title">La timeline Inceptum</p>
-      </div>
-      <div id="thetimeline" class="clearfix">
-         <div class="categ">
-            <div class="events clearfix">
-               <p><img src="img/grey.gif" class="lazy" data-original="img/timeline-events.png" title="icon events" /> nos �v�nements</p>
-            </div>
-            <div class="viz clearfix darker">
-               <p><img src="img/grey.gif" class="lazy" data-original="img/timeline-viz.png" title="icon viz" /> nos visualisations</p>
-            </div>
-            <div class="prez clearfix ">
-               <p><img src="img/grey.gif" class="lazy" data-original="img/timeline-prez.png" title="icon prez"/>nos pr�sentations</p>
-            </div>
-            <div class="videos clearfix darker">
-               <p><img src="img/grey.gif" class="lazy" data-original="img/timeline-videos.png" title="icon videos"/>les vid�os</p>
-            </div>
-            <div class="articles clearfix">
-               <p><img src="img/grey.gif" class="lazy" data-original="img/timeline-articles.png" title="icon articles"/>les articles</p>
-            </div>
-         </div>
-         <div id="elements">
-            <table class="big-table">
-			</table>
-         </div>
-		  
-		 <div class="legend clearfix">
-			<div class="past">vers le pass�</div>
-			<div class="future">vers le futur</div>
-		 </div>
-		 </div></div></div>
+
+      <section id="timeline">                               <!-- Page 4 starts here -->
+      <div class="content" style="margin-right:40px">
+			  <hr />
+			  <div class="text clearfix">
+				 <p class="title">Schedule</p>
+			  </div>
+			  <div id="thetimeline" class="scheduleImg">
+				 X
+			  </div>
+	  </div>	  
+      </section>    
            
            
-           
-           
-           
-           
-      <div id="presentation">                        <!-- Page 3 starts here -->
-         <div class="content">
+      <section id="presentation" >                        <!-- Page 3 starts here -->
+         <div class="content" style="margin-right:40px;">
             <hr />
-            <div class="text">
-               <p class="title">We tell <br /> stories<br />from data</p>
-               <div>
-                  <p>We aim to create genuine information experiences around data visualization. As a matter of fact, we believe that traditional, rigid charts and graphs are no longer suited to explain the complexity of information. Likewise, obscure documents and never-ending spreadsheets are little incentive to go deeper in the story behind the data. At Inceptum, we rather want to create interfaces calling for interaction and exploration based on a playful user experience.</p>
-                  <p>We gather a wide range of skills, from information architecture, design, statistics to web development and media strategy. Our workflow is focused on user experience, as we create pathways to information that generate interest and increase memorization.</p>
-               </div>
-            </div>
-            <div class="clearfix svg">
-               <div id="canvas"></div>
-               <div class="legend">
-                  <p class="title-top">Concert venues in Paris:</p>
-                  <p class="title-bottom"> Geographical proximity, musical similarity?</p>
-                  <div class="description">
-                     <p>This visualisation displays the main concert venues in Paris, and the similarity of their main musical genre. The wider the link between two venues, the greater the musicalsimilarity.</p>
-                     <p>The size of the dots indicates the seats capacity of the venue.</p>
-                     <p>The data has been extracted from music website Last.fm and is automatically updated on a weekly basis.</p>
-                  </div>
-                  <div class="tags clearfix">
-                     <p>Display the similarity by tag:</p>
-                     <ul class="tags-list clearfix">
-                        <li class="all active">All</li>
-                     </ul>
-                  </div>
-               </div>
+			<div class="text clearfix" >
+				 <p class="title">Gallery</p>
+			</div>
+            
+			
+			
+			<div class="galleryPane" style="height:80%;margin-top:40px;">
+				<!--
+					<iframe class="styleScroll"  width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" src="gallery/index.html">
+					</iframe>
+				-->
             </div>
          </div>
-      </div>
+      </section>
       
-      
-	  
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div id="team">                                                           <!-- Page 6 starts here -->
-             <div class="content">
-                  <hr />
-                  <div class="text">
-                     <p class="title">We created Inceptum together</p>
-                  </div>
-	
-                  <ul>
-                     <li>
-                        <div class="photo"><img data-original="img/team-caroline.png" class="lazy" id="portrait-image" src="img/grey.gif" /></div>
-                        <div class="name">Caroline Goulard</div>
-                        <div class="spec">Lady Data</div>
-                        <div class="tags">
-                           <p>#media&nbsp;strategy</p>
-                           <p> #storytelling</p>
-                           <p> #biz&nbsp;dev</p>
-                        </div>
-                        <div class="twitter-account"><a href="http://twitter.com/Inceptum" target="_blank">@Inceptum</a></div>
-                     </li>
-                     <li>
-                        <div class="photo"><img data-original="img/team-benoit.png" class="lazy" id="portrait-image" src="img/grey.gif" /></div>
-                        <div class="name">Benoit Vidal</div>
-                        <div class="spec">The Mamas and the Datas</div>
-                        <div class="tags">
-                           <p></p>
-                           <p>#information&nbsp;architecture</p>
-                           <p>#digital&nbsp;strategy</p>
-                        </div>
-                        <div class="twitter-account"><a href="http://twitter.com/benoitvidal" target="_blank">@benoitvidal</a></div>
-                     </li>
-                     <li>
-                        <div class="photo"><img data-original="img/team-leo.png" class="lazy" id="portrait-image" src="img/grey.gif" /></div>
-                        <div class="name">L�o Gourven</div>
-                        <div class="spec">JS division</div>
-                        <div class="tags">
-                           <p>#statistics</p>
-                           <p>#web&nbsp;development</p>
-                           <p>#interactions</p>
-                        </div>
-                        <div class="twitter-account"><a href="http://twitter.com/leogourven" target="_blank">@leogourven</a></div>
-                     </li>
-                     <li>
-                        <div class="photo"><img data-original="img/team-fx.png" class="lazy" id="portrait-image" src="img/grey.gif" /></div>
-                        <div class="name">Fran�ois-Xavier Fringant</div>
-                        <div class="spec">Buena Data Visual Club</div>
-                        <div class="tags">
-                           <p>#editorial&nbsp;marketing</p>
-                           <p>#international</p>
-                           <p>#open&nbsp;data</p>
-                        </div>
-                        <div class="twitter-account"><a href="http://twitter.com/datanamics" target="_blank">@datanamics</a></div>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-			<!--Page 6 ends here -->
+     		
 			
 			
-			
-			
-			
-			
-			
-			
-			
-            <div id="thoughts">                                                   <!-- Page 7 starts here  -->
+            <section id="thoughts">                                                   <!-- Page 7 starts here  -->
            
-               <div class="content">
+               <div class="content" style="margin-right:40px;">
                   <hr />
-                  <div class="text">
-                     <div><span class="title">WE HAVE A BLOG</span><span class="follow"><a href="http://blog.actuvisu.fr" target="_blank">follow the blog</a></span></div>
-                     <div style="clear:both;"></div>
-                     <div class="articles clearfix">
-                        <ul class="clearfix">
-                           <li class="first post-1">
-                              <p class="post-title"></p>
-                              <div class="post"></div>
-                              <div class="button"><a href="#"target="_blank" title="Read more">Read more</a></div>
-                           </li>
-                           <li class="first post-2">
-                              <p class="post-title"></p>
-                              <div class="post"></div>
-                              <div class="button"><a href="#" target="_blank" title="Read more">Read more</a></div>
-                           </li>
-                           <li class="post-3">
-                              <p class="post-title "></p>
-                              <div class="post"></div>
-                              <div class="button"><a href="#" target="_blank" title="Read more">Read more</a></div>
-                           </li>
-                           <li class="post-4">
-                              <p class="post-title"></p>
-                              <div class="post"></div>
-                              <div class="button"><a href="#" target="_blank" title="Read more">Read more</a></div>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="right">
-                     <div class="twitter">
-                        <hr />
-                        <p class="title"> WE ARE ALSO ON TWITTER</p>
-                        <ul>
-                           <li>
-                              <p class="tweet"></p>
-                              <p class="time"></p>
-                           </li>
-                           <li>
-                              <p class="tweet"></p>
-                              <p class="time"></p>
-                           </li>
-                        </ul>
-                        <div class="follow"><a href="http://twitter.com/Inceptum" target="_blank">follow @Inceptum</a></div>
-                     </div>
-                     <div class="partenaires">
-                        <hr />
-                        <p class="title">we love our partners</p>
-                        <ul>
-                           <li><a href="http://www.everydatalab.com/everydatalab.html" target="_blank" title="Everydatalab">everydatalab</a></li>
-                           <li><a href="http://www.isokron.com/" target="_blank" title="Isokron">Isokron</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div> 
+                <div class="text">
+                     <span class="title">Reach Us</span>
+				</div>
+			   
+			  
+				<div class="mapPane styleScroll" style="width:90%;;margin-left:93px;margin-top:50px;">
+					<div class="mapMap" "> 
+					<iframe style="margin:4% 5% auto;" width="90%" height="90%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=d&amp;source=s_d&amp;saddr=Ma+Anandmayee+Marg&amp;daddr=Govind+Ballabh+Pant+Engineering+College,+Okhla+Phase+III,+New+Delhi,+Delhi&amp;hl=en&amp;geocode=FfyMswEdZ_aaBA%3BFSiWswEdIRKbBCG7grSTMZMS7Sk5rk6i5eMMOTG7grSTMZMS7Q&amp;aq=0&amp;oq=Govi&amp;sll=28.545302,77.267568&amp;sspn=0.00573,0.010568&amp;dirflg=w&amp;mra=dme&amp;mrsp=0&amp;sz=17&amp;ie=UTF8&amp;t=m&amp;ll=28.545302,77.267568&amp;spn=0.00573,0.010568&amp;output=embed">
+					
+				
+					</div>
+					<div class="mapDesc text styleScroll" >
+						<p style="font-size:150%;"><pre>Directions
+All of Inceptum’s activities are held on the Govind Ballabh Pant Engineering College Campus in Okhla Industrial Estate, New Delhi.
+Driving
+Driving from Ma Anandmayee Marg
+Take the Okhla Phase 3 Road Exit below Govind Puri Metro Station and head east three hundred metres until the road bifurcates. Keep left on the Okhla Phase 3 Road and head east along the road towards the Govind Ballabh Pant Engineering College campus, and cross Mother Dairy Shop. At this point Okhla Phase 3 Road becomes College Road. Head Straight to reach the parking lot. Parking will be free. Once inside the college, follow the Inceptum signs to locate venues.
+Driving from Bhakti Vedant Marg
+Take the Modi Mill Exit and head straight approximately hundred metres towards Kangaroo Park roundabout. Turn right and then make a quick left at the roundabout. Follow this road until a T-point. Turn left onto College Road and head straight to reach the parking lot. Parking will be free. Once inside the college, follow the Inceptum signs to locate venues.
+Public Transportation
+Metro
+It’s easy to get to the Inceptum’s events via Metro. Take Metro to the Govind Puri station on violet line. Take auto rickshaw up to the parking lot or walk along the driving directions from Ma Anandmayee Marg. For more information on Metro’s schedule, visit delhimetrorail.com or call 011-22561231.
+Buses
+Govind Ballabh Pant Engineering College is served very well by DTC buses. Take DTC bus to the National Small Industries Corporation or the more commonly known Govindpuri metro bus stand. Take auto rickshaw up to the parking lot or walk along the driving directions from Ma Anandmayee Marg. Visit delhi.gov.in/wps/wcm/connect/DOIT_DTC/dtc/home for information on bus schedules.
+</pre>
+						</p> 
+					</div>
+				</div>
+				</div> <!--content -->
+				
+			</section>
+			
+
+			<div id="footer" style="z-index:-1;height:300px;background: url(img/body-bg.jpg) repeat #000;padding: 30px 0px;text-shadow: 0px 1px 0px #000;">
+				<div class="content">
+					blah blah Footer all rights reserved
+				</div>
+			</div>
+			
+			
+			
+			</div> 
             
-			
-			
 			
 			
 			
@@ -468,52 +401,8 @@
 			
 		<!-- NAVIGATION MENU STARTS HERE -->
 		
-         <div id="navigation" style="z-index:9">
-            <div class="opacity"></div>
-            <div class="logo"><img src="img/big-logo.png" title="Inceptum Logo"/></div>
-            <div class="buttons">
-               <div class="intro page">
-                  
-                <p>1</p>                       <!-- tab 1 -->
-                  <div>
-                     <p>HOME</p>
-                  </div>
-               </div>
-               <div class="works page">
-                  <p>2</p>
-                  <div>
-                     <p>EVENT</p>
-                  </div>
-               </div>
-               <div class="timeline page">
-                  <p>3</p>
-                  <div>
-                     <p>SCHEDULE</p>
-                  </div>
-               </div>
-               <div class="presentation page">
-                  <p>4</p>
-                  <div>
-                     <p>GALLERY</p>
-                  </div>
-               </div>
-               <div class="team page">
-                  <p>5</p>
-                  <div>
-                     <p>OUT TEAM</p>
-                  </div>
-               </div>
-               <div class="thoughts page">
-                  <p>6</p>
-                  <div>
-                     <p>REACH US</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+         
+	  </div>
       <!--! end of #container -->
-      <div class="tool-tip"></div>
-      <div id="hover-table"></div>
    </body>
 </html>

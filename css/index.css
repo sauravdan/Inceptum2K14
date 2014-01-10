@@ -13,11 +13,12 @@
 }*/
 
 .college-logo{
+	background:url(../img/college-logo.png) no-repeat;
+	background-size:cover;
 	position:absolute;
 	float:right;
-	right:20px;
-	top:20px;
-	background:rgba(255,255,255,0.5);
+	right:10px;
+	top:10px;
 	width:80px;
 	height:80px;
 	z-index:1000;
@@ -30,7 +31,6 @@
 	background:rgba(0,255,0,0.5);
 	height:150px;
 	width:100%;
-	z-index:1000;
 }
 .home-box{
 	position:absolute;
@@ -77,14 +77,12 @@
 .sponsors-strip{
 	position:absolute;
 	float:bottom;
-	bottom:10px;
-	height:80px;
-	left:130px;
-	right:50px;
-	border:1px solid #f00;
-	background:rgba(255,255,255,0.01);
-	border-radius:10px;
-	
+	bottom:0px;
+	height:100px;
+	width:100%;
+	left:0px;
+	right:0px;
+	background:rgba(255,255,255,0.1);
 }
 
 
@@ -110,4 +108,118 @@
 
 .eventCat{
 	cursor:pointer;
+}
+
+.scheduleImg,.galleryPane,.mapPane{
+	position: absolute;
+	display: block;
+	height: 13.5%;
+	width: inherit;
+	border: 0px #fff solid;
+	margin-right: 40px;
+	background: rgba(200,200,200,0.5);
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+.galleryThumb{
+	position:relative;
+	float:left;
+	display:inline-block;
+	background:rgba(200,200,200,0.5);
+	width:60%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+.galleryImage{
+	position:relative;
+	float:right;
+	display:inline-block;
+	background:rgba(200,200,200,0.5);
+	width:40%;
+	height:100%;
+	border-left:1% solid #111;
+	vertical-align:middle;
+	
+}
+.galleryImage img{	
+}
+
+.mapMap{
+	display:inline-block;
+	float:left;
+	width:65%;
+	height:100%;
+	background:rgba(00,00,00,0.5);
+}
+.mapDesc{
+	display:inline-block;
+	float:right;
+	width:33%;
+	height:97%;
+	background:rgba(200, 120, 0, 0.5);
+	padding:0% 1% 1% 1%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}.mapDesc:after{
+	position:relative;
+	display:inline-block;
+	height:1%;
+	background:inherit;
+	z-index:1000;
+}
+
+.menuHome{
+	background:url(../img/home.png);
+	background-size:cover;
+}
+.menuHome:hover{
+	background:url(../img/home_b.png);
+	background-size:cover;
+	-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
+}
+.menuEvents{
+	background:url(../img/events.png);
+	background-size:cover;
+}
+.menuEvents:hover{
+	background:url(../img/events_b.png);
+-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
+	background-size:cover;
+}
+.menuSchedule{
+	background:url(../img/schedule.png);
+	background-size:cover;
+}
+.menuSchedule:hover{
+	background:url(../img/schedule_b.png);
+-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
+	background-size:cover;
+}
+.menuGallery{
+	background:url(../img/gallery.png);
+	background-size:cover;
+}
+.menuGallery:hover{
+	background:url(../img/gallery_b.png);
+-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
+	background-size:cover;
+}
+.menuReachus{
+	background:url(../img/reachus.png);
+	background-size:cover;
+}
+.menuReachus:hover{
+	background:url(../img/reachus_b.png);
+-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.7));
+	background-size:cover;
+}
+
+.ThreeDee {
+font-family: Garamond, serif;
+line-height: 1em;
+color: #dedede;
+font-size: 175px;
+text-shadow:0px 0px 0 rgb(185,185,185),-1px 0px 0 rgb(181,181,181),-2px 0px 0 rgb(177,177,177),-3px 0px 0 rgb(173,173,173),-4px 0px 0 rgb(169,169,169),-5px 0px 0 rgb(165,165,165),-6px 0px 0 rgb(161,161,161),-7px 0px 0 rgb(157,157,157),-8px 0px 0 rgb(153,153,153), -9px 0px 0 rgb(149,149,149),-10px 0px 9px rgba(0,0,0,0.5),-10px 0px 1px rgba(0,0,0,0.5),0px 0px 9px rgba(0,0,0,.2);
 }

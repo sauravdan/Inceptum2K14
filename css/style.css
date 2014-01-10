@@ -137,12 +137,13 @@ li {list-style:none;}
 #language span:hover {cursor:pointer;}
 #navigation{z-index:10000;}
 #navigation .logo {position:fixed;top:0;left:0;width:100px;margin-top:5px;text-align:center;cursor:pointer;}
-#navigation .logo img {vertical-align:middle;}
+#navigation .logo img {vertical-align:middle:}
+#navigation .imagemenu {cursor:pointer;width:70px;height:70px;-webkit-transform:translateX(-0px);z-index:9999;}
 
 #navigation .opacity {opacity:0.2;filter:alpha(opacity=20);background-color:#000;position:absolute;width:100px;top:0;bottom:0;zoom: 1}
 #navigation .buttons {position:fixed;top:20%;left:0;}
 #navigation .buttons > div {height:4%;position:relative;color:#FFF;font-family:Knockout;font-size:22px;}
-#navigation .buttons div > p {margin:0;padding: 0 40%;overflow:hidden;cursor:pointer;position:absolute;z-index:9999;top:25%;}
+#navigation .buttons div > p {margin:0;padding: 0 40%;overflow:hidden;cursor:pointer;position:absolute;z-index:-9999;top:25%;}
 #navigation .buttons div div {left:-200px;width:190px;color:#FFF;text-transform:uppercase;position:absolute;height:4.2%;top:0;z-index:40;}
 #navigation .buttons div div p {overflow:hidden;/*margin: 12px 0;*/position:absolute;text-align:center;padding:0;width:100%;top:25%;}
 #navigation .buttons div p > img {margin:-7px;}

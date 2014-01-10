@@ -1,6 +1,3 @@
-//ignore errors
-window.onerror = function (mesg, url, num) {;return true;}
-
 QueryLoader.init();
 
 $(document).ready(function () {
@@ -13,7 +10,7 @@ $("img.lazy").lazyload();
 
 	var height = $(window).height(),
 		width = $(window).width(),
-		pages = ["intro", "works","timeline","presentation", "team", "thoughts"],
+		pages = ["intro", "works","timeline","presentation", "thoughts"],
 		currentPage = 0,
 		links,
 		venues = [];
@@ -45,7 +42,8 @@ var delta = 200;
 
 // Update
  $(window).resize(function() {
-	 rtime = new Date();
+	
+	rtime = new Date();
     if (timeout === false) {
         timeout = true;
         setTimeout(resizeend, delta);
@@ -64,10 +62,6 @@ function resizeend(){
 
 }
 
-$(window).scroll(function () {
-	//currentPage = Math.round($(window).scrollTop()/height);
-	
-})
 
 // Menu
 $('.logo').click(function(){
