@@ -63,7 +63,7 @@ body {
 #slider-container .face {
     position: absolute;
     padding: 0px;
-	opacity:0.9;
+	opacity:1;
 }
 
 #slider-container .face img{

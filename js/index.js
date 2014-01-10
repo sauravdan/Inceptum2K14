@@ -1,11 +1,12 @@
 
  var hexaDemo1;
-            text1 = 'INCEPTUM 2014'.split(''),//ιηςερτμɱ
+            text1 = 'INCEPTUM'.split(''),//ιηςερτμɱ
+			text2 = '2K14'.split(''),//ιηςερτμɱ
             settings = {
-                size: 80,
-                margin: 2,
-                fontSize: 50,
-                perspective: 550
+                size: 110,
+                margin: 5,
+                fontSize: 72,
+                perspective: 800
             },
             makeObject = function(a){
                 var o = {};
@@ -38,13 +39,18 @@
     
         document.addEventListener('DOMContentLoaded', function(){
             hexaDemo1 = new HexaFlip(document.getElementById('hexaflip-demo1'), makeObject(text1), settings);
-    
+			hexaDemo2 = new HexaFlip(document.getElementById('hexaflip-demo2'), makeObject(text2), settings);
+			$("#hexaflip-demo1").css("left",($(window).width()-$("#hexaflip-demo1").width())/2+'px');
+			$("#hexaflip-demo2").css("left",($(window).width()-$("#hexaflip-demo2").width())/2+'px');
+			
             setTimeout(function(){
                 hexaDemo1.setValue(getSequence(text1, true));
+                hexaDemo2.setValue(getSequence(text2, true));
             }, 0);
     
             setTimeout(function(){
                 hexaDemo1.setValue(getSequence(text1));
+                hexaDemo2.setValue(getSequence(text2));
             }, 1000);
     
             setTimeout(function(){
@@ -52,6 +58,13 @@
 				setInterval(function(){
                     hexaDemo1.setValue(getSequence(text1, false,true));
 					setTimeout(function(){hexaDemo1.setValue(getSequence(text1))},500);
-                }, 2000);
-            }, 1000);
+                }, 3000);
+            }, 4000);
+			setTimeout(function(){
+			
+				setInterval(function(){
+                    hexaDemo2.setValue(getSequence(text2, false,true));
+					setTimeout(function(){hexaDemo2.setValue(getSequence(text2))},500);
+                }, 3000);
+            }, 1500);
         }, false);
