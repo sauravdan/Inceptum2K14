@@ -27,10 +27,15 @@
       <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	  <link rel="stylesheet" href="css/impulseslider.css" type="text/css" media="screen"/>
 	  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen"/>
-		<link href="css/hexaflip.css" rel="stylesheet" type="text/css">
-        <link href="css/demo.css" rel="stylesheet" type="text/css">
+	  <link href="css/hexaflip.css" rel="stylesheet" type="text/css">
+      <link href="css/demo.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
       
 	  <script src="js/libs/jquery.js"></script>
+	  <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script> 
+	  <script src="js/gmap3.js"></script>
 	  <script src="js/libs/modernizr-2.0.6.min.js"></script>
 	  <script src="js/queryLoader.js"></script>  
 	  <script src="js/plugins.js"></script>  
@@ -43,7 +48,8 @@
 	  <script defer src="js/hexaflip.js"></script>
 	  <script defer src="js/jquery.textillate.js"></script>
  	  <script defer src="js/jquery.lettering.js"></script>
- 
+	  
+      <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
 	  <script defer src="js/index.js"></script>  
 	  
 	  <script>
@@ -87,10 +93,10 @@
 				imageDivClasses: ["face"]
 			});
 			
-			$(".tlt").textillate({loop: true});
+			$(".tlt").textillate({loop: true,out:{ effect: 'rollOut' ,delayScale: 1.5}});
 			$(".dateTitle").textillate({
 				loop: true,
-				in: { effect: 'flip',delayScale: 1.5 },
+				in: { effect: 'flip',delayScale: 1.5	 },
 				out:{ effect: 'flip' ,delayScale: 1.5}
 				});
 			
@@ -174,7 +180,8 @@
 	  
        <section id="intro">
 		<div style="-webkit-filter: opacity(1);background:url(img/bg.png) repeat;position:fixed;top:0%;left:0%;width:100%;height:100%;">
-		
+			<div class="college-logo"></div>
+			
 			<h1 class="tlt" style="color:#000;margin-top:400px;width:100%;text-align:center;font-size:500%;">
 				<ul class="texts">
 					<li>INCEPTUM 2K14 IS HERE</li>   
@@ -184,6 +191,16 @@
 					<li>Blah blah aur text daalo nd ignore all above text</li>
 				</ul>
 			</h1>
+		
+			
+			<div class="sponsors-strip">
+				<h2 style="position:relative;width:100%;text-align:center;color:#000;text-decoration:underline;">Our Sponsors</h2>
+				
+				<a href="http://www.hdfcbank.com/" target=_blank ><img src="img/hdfc.jpg" style="display:inline-block;height:50px;margin-left:100px;margin-top:-10px;"/></a>
+				<a href="http://www.hdfcbank.com/" target=_blank ><img src="img/hdfc.jpg" style="display:inline-block;height:50px;margin-left:10px;margin-top:-10px;"/></a>
+				<a href="http://www.hdfcbank.com/" target=_blank ><img src="img/hdfc.jpg" style="display:inline-block;height:50px;margin-left:10px;margin-top:-10px;"/></a>
+				
+			</div>
 		</div>
 		<!--div style="background:rgba(0,0,0,0.5);position:fixed;top:0%;left:0%;width:100%;height:100%;">
 		</div>
@@ -194,7 +211,6 @@
 			<div id="hexaflip-demo2" class="demo" style="position:fixed;top:250px;left:33%;"></div>
 			
 			<!--div class="ThreeDee">ιηςερτμϻ</div> --κɱՁƙ1Ч-->
-			<div class="college-logo"></div>
 			
 			<!--div id="slider-container" style="position:fixed;top:50px;left:40%;z-index:4;">
 				<div id="slider">
@@ -202,10 +218,6 @@
 				</div>
 			</div-->
 			
-			
-			<div class="sponsors-strip">
-				<h2 style="position:relative;width:100%;text-align:center;color:#000;text-decoration:underline;">Our Sponsors</h2>
-			</div>
          </div>
       </section>
      
@@ -301,46 +313,46 @@
 			
             <section id="thoughts">                                                   <!-- Page 7 starts here  -->
            
-               <div class="content" style="margin-right:40px;">
+               <div class="content" >
                   <hr />
                 <div class="text">
                      <span class="title">Reach Us</span>
 				</div>
 			   
 			  
-				<div class="mapPane styleScroll" style="width:90%;;margin-left:93px;margin-top:50px;">
-					<div class="mapMap" "> 
-					<iframe style="margin:4% 5% auto;" width="90%" height="90%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=d&amp;source=s_d&amp;saddr=Ma+Anandmayee+Marg&amp;daddr=Govind+Ballabh+Pant+Engineering+College,+Okhla+Phase+III,+New+Delhi,+Delhi&amp;hl=en&amp;geocode=FfyMswEdZ_aaBA%3BFSiWswEdIRKbBCG7grSTMZMS7Sk5rk6i5eMMOTG7grSTMZMS7Q&amp;aq=0&amp;oq=Govi&amp;sll=28.545302,77.267568&amp;sspn=0.00573,0.010568&amp;dirflg=w&amp;mra=dme&amp;mrsp=0&amp;sz=17&amp;ie=UTF8&amp;t=m&amp;ll=28.545302,77.267568&amp;spn=0.00573,0.010568&amp;output=embed">
+				<div class="mapPane styleScroll" style="overflow-x:visible;overflow-y:visible;margin-left:0px;margin-top:50px;height:100%;background:rgba(0,0,0,0);">
+					<div class="mapMap" >
 					
-				
 					</div>
-					<div class="mapDesc text styleScroll" >
-						<p style="font-size:150%;"><pre>Directions
-All of Inceptum’s activities are held on the Govind Ballabh Pant Engineering College Campus in Okhla Industrial Estate, New Delhi.
-Driving
-Driving from Ma Anandmayee Marg
-Take the Okhla Phase 3 Road Exit below Govind Puri Metro Station and head east three hundred metres until the road bifurcates. Keep left on the Okhla Phase 3 Road and head east along the road towards the Govind Ballabh Pant Engineering College campus, and cross Mother Dairy Shop. At this point Okhla Phase 3 Road becomes College Road. Head Straight to reach the parking lot. Parking will be free. Once inside the college, follow the Inceptum signs to locate venues.
-Driving from Bhakti Vedant Marg
-Take the Modi Mill Exit and head straight approximately hundred metres towards Kangaroo Park roundabout. Turn right and then make a quick left at the roundabout. Follow this road until a T-point. Turn left onto College Road and head straight to reach the parking lot. Parking will be free. Once inside the college, follow the Inceptum signs to locate venues.
-Public Transportation
-Metro
-It’s easy to get to the Inceptum’s events via Metro. Take Metro to the Govind Puri station on violet line. Take auto rickshaw up to the parking lot or walk along the driving directions from Ma Anandmayee Marg. For more information on Metro’s schedule, visit delhimetrorail.com or call 011-22561231.
-Buses
-Govind Ballabh Pant Engineering College is served very well by DTC buses. Take DTC bus to the National Small Industries Corporation or the more commonly known Govindpuri metro bus stand. Take auto rickshaw up to the parking lot or walk along the driving directions from Ma Anandmayee Marg. Visit delhi.gov.in/wps/wcm/connect/DOIT_DTC/dtc/home for information on bus schedules.
-</pre>
-						</p> 
+					
+					<div class="mapAddress">
+						<h2>Govind Ballabh Pant Engineering College</h2>
+						<h2>(Govt. Of NCT of Delhi)</h2>
+						<h3>Okhla Industrial Estate, Phase-III<br>
+						New Delhi-110020 <br>
+						Phone No.- 91-11-26382314<br>
+						Fax- 91-11-26382317</h3>
 					</div>
+					<br>
+					<div class="mapOrganisers">
+						<h2 style="text-align:center">Inceptum 2014 Organisers</h2>
+						<h3><u>Shashank</u><br>
+						989989898989 <br>
+						<u>Deepak</u><br>
+						989989898989 <br>
+					</div>
+					
 				</div>
 				</div> <!--content -->
 				
 			</section>
 			
 
-			<div id="footer" style="z-index:-1;height:300px;background: url(img/body-bg.jpg) repeat #000;padding: 30px 0px;text-shadow: 0px 1px 0px #000;">
+			<section id="footer" style="z-index:-1;height:300px;background: url(img/body-bg.jpg) repeat #000;padding: 30px 0px;text-shadow: 0px 1px 0px #000;">
 				<div class="content">
 					blah blah Footer all rights reserved
 				</div>
-			</div>
+			</section>
 			
 			
 			

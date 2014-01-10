@@ -68,3 +68,70 @@
                 }, 3000);
             }, 1500);
         }, false);
+		
+		
+$(".mapMap").gmap3({ 
+  getroute:{
+    options:{
+        origin:"28.544559,77.264441",
+        destination:"28.547382,77.271614",
+        travelMode: google.maps.DirectionsTravelMode.WALKING
+    },
+    callback: function(results){
+      if (!results) return;
+      $(this).gmap3({
+        map:{
+          options:{
+			mapTypeId: google.maps.MapTypeId.SATELLITE,
+            zoom: 12,  
+            center: [-33.879, 151.235]
+          }
+        },
+        directionsrenderer:{
+          container: $(document.createElement("div")).addClass("googlemap").insertAfter($(".mapMap")),
+          options:{
+            directions:results
+          } 
+        }
+      });
+    }
+  }
+},
+{ 
+  marker:{
+    latLng:[28.544559,77.264441]
+  },
+  overlay:{
+    latLng: [28.544559,77.264441],
+    options:{
+      content:  '<div style="color:#fff; border:1px solid #fff; ' +
+                'background-color: #3c81b5; line-height:20px; ' +
+                'height: 40px; text-align:center">Govinpuri<br>Metro Station !</div>',
+      offset:{
+        y:20,
+        x:0
+      }
+      
+    }
+  }
+  
+},
+{ 
+  marker:{
+    latLng:[28.547382,77.271614]
+  },
+  overlay:{
+    latLng: [28.547382,77.271614],
+    options:{
+      content:  '<div style="color:#fff; border:1px solid #fff; ' +
+                'background-color: #3c81b5; width:200px; line-height:20px; ' +
+                'height: 40px; text-align:center">Inceptum to be held here !!<br>GBPEC New Delhi !</div>',
+      offset:{
+        y:-40,
+        x:-200
+      }
+      
+    }
+  }
+  
+});
