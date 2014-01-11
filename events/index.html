@@ -32,6 +32,38 @@
 					<section class="main demo-2">
 								<div id="grid" class="grid clearfix">
 							
+								<!-- Template of event [Manish: read these instructions and see the samples I have created and likewise populate more events
+								//	
+								//copy the template code as it is replacing the following things in curly braces
+								{EVENT NAME} = Proper Event name for eg. "Death Race" [without quotes]
+								{EVENT SHORT NAME}= Event name without spaces and in small letters for eg. "deathrace"
+								{THUMB IMAGE}= Create an image of size 200 X 150 px in photoshop or paint and paste it in /images/thumbs folder eg. "1.jpg"
+								{THUMB IMAGE}= Create an image of size 400 X 300 px in photoshop or paint and paste it in /images/large folder eg. "1.jpg"
+								
+								-x-x-x-x-x- copy from below line -x-x-x-x-x-x
+								
+								<div class="uc-container">
+									<div class="uc-initial-content">
+										<img src="images/thumbs/{THUMB IMAGE}" />
+										<span class="icon-eye" data-name="{EVENT NAME}"></span>
+									</div>
+									<div class="uc-final-content">
+										<img src="images/large/1.jpg" alt="image01-large" />
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','{EVENT SHORT NAME}');">Details</div>
+											<div class="myButton" onclick="display('rules','{EVENT SHORT NAME}');">Rules</div>
+											<div class="myButton" onclick="display('contact','{EVENT SHORT NAME}');">Contact</div>
+										</div>
+										
+										<span class="icon-cancel"></span>
+									</div>
+								</div>  
+								
+								-x-x-x-x-x- copy till above line -x-x-x-x-x-x
+								
+								Template END -->
+								
+								
 								<!--Death Race-->
 								<div class="uc-container">
 									<div class="uc-initial-content">
@@ -40,7 +72,65 @@
 									</div>
 									<div class="uc-final-content">
 										<img src="images/large/1.jpg" alt="image01-large" />
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','deathrace');">Details</div>
+											<div class="myButton" onclick="display('rules','deathrace');">Rules</div>
+											<div class="myButton" onclick="display('contact','deathrace');">Contact</div>
+										</div>
 										
+										<span class="icon-cancel"></span>
+									</div>
+								</div><!-- / uc-container -->
+								
+								
+								<!--Online Programming-->
+								<div class="uc-container">
+									<div class="uc-initial-content">
+										<img src="images/thumbs/2.jpg" alt="image02" />
+										<span class="icon-eye" data-name="Online Programming Contest"></span>
+									</div>
+									<div class="uc-final-content">
+										<img src="images/large/2.jpg" alt="image02-large" />
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','deathrace');">Details</div>
+											<div class="myButton" onclick="display('rules','deathrace');">Rules</div>
+											<div class="myButton" onclick="display('contact','deathrace');">Contact</div>
+										</div>
+										<span class="icon-cancel"></span>
+									</div>
+								</div><!-- / uc-container -->
+				
+								<!--Robo Soccer-->
+								<div class="uc-container">
+									<div class="uc-initial-content">
+										<img src="images/thumbs/3.jpg" alt="image03" />
+										<span class="icon-eye" data-name="Robo Soccer"></span>
+									</div>
+									<div class="uc-final-content">
+										<img src="images/large/3.jpg" alt="image03-large" />
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','robosoccer');">Details</div>
+											<div class="myButton" onclick="display('rules','robosoccer');">Rules</div>
+											<div class="myButton" onclick="display('contact','robosoccer');">Contact</div>
+										</div>
+										<span class="icon-cancel"></span>
+									</div>
+								</div><!-- / uc-container -->
+								
+								
+								<!--Shoot the bug-->
+								<div class="uc-container">
+									<div class="uc-initial-content">
+										<img src="images/thumbs/4.jpg" alt="image04" />
+										<span class="icon-eye" data-name="Shoot The bug "></span>
+									</div>
+									<div class="uc-final-content">
+										<img src="images/large/4.jpg" alt="image04-large" />
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','shootthebug');">Details</div>
+											<div class="myButton" onclick="display('rules','shootthebug');">Rules</div>
+											<div class="myButton" onclick="display('contact','shootthebug');">Contact</div>
+										</div>
 										<span class="icon-cancel"></span>
 									</div>
 								</div><!-- / uc-container -->
@@ -48,36 +138,34 @@
 								<!--Robo Soccer-->
 								<div class="uc-container">
 									<div class="uc-initial-content">
-										<img src="images/thumbs/2.jpg" alt="image02" />
-										<span class="icon-eye"></span>
-									</div>
-									<div class="uc-final-content">
-										<img src="images/large/2.jpg" alt="image02-large" />
-										<div class="title"><h4>Planet</h4> by Dan Matutina <a href="http://drbl.in/eZoL" class="icon-link"></a></div>
-										<span class="icon-cancel"></span>
-									</div>
-								</div><!-- / uc-container -->
-
-								<div class="uc-container">
-									<div class="uc-initial-content">
 										<img src="images/thumbs/3.jpg" alt="image03" />
-										<span class="icon-eye"></span>
+										<span class="icon-eye" data-name="Robo Soccer"></span>
 									</div>
 									<div class="uc-final-content">
 										<img src="images/large/3.jpg" alt="image03-large" />
-										<div class="title"><h4>Angry Nerd Blofeld</h4> by Dan Matutina <a href="http://drbl.in/eLEa" class="icon-link"></a></div>
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','robosoccer');">Details</div>
+											<div class="myButton" onclick="display('rules','robosoccer');">Rules</div>
+											<div class="myButton" onclick="display('contact','robosoccer');">Contact</div>
+										</div>
 										<span class="icon-cancel"></span>
 									</div>
 								</div><!-- / uc-container -->
-
+								
+								
+								<!--Shoot the bug-->
 								<div class="uc-container">
 									<div class="uc-initial-content">
 										<img src="images/thumbs/4.jpg" alt="image04" />
-										<span class="icon-eye"></span>
+										<span class="icon-eye" data-name="Shoot The bug "></span>
 									</div>
 									<div class="uc-final-content">
 										<img src="images/large/4.jpg" alt="image04-large" />
-										<div class="title"><h4>Ero Senin</h4> by Dan Matutina <a href="http://drbl.in/dJfK" class="icon-link"></a></div>
+										<div class="title" style="direction:ltr;">
+											<div class="myButton" onclick="display('details','shootthebug');">Details</div>
+											<div class="myButton" onclick="display('rules','shootthebug');">Rules</div>
+											<div class="myButton" onclick="display('contact','shootthebug');">Contact</div>
+										</div>
 										<span class="icon-cancel"></span>
 									</div>
 								</div><!-- / uc-container -->
@@ -139,11 +227,12 @@
 
 					var $item = $( this ), direction;
 
-					switch( i ) {
+					switch( i%4 ) {
 						case 0 : direction = ['right','bottom']; break;
 						case 1 : direction = ['left','bottom']; break;
 						case 2 : direction = ['right','top']; break;
 						case 3 : direction = ['left','top']; break;
+						
 					}
 					
 					var pfold = $item.pfold( {
@@ -169,6 +258,15 @@
 				} );
 				
 			});
+			
+			
+			
+			function display(type,evnt){
+			
+			//how to display info and stuff
+				alert("Type:"+type+"  Event:"+evnt);		
+			
+			}
 		</script>
     </body>
 </html>
