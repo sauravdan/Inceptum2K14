@@ -141,6 +141,6 @@ $(".mapMap").gmap3({
 
 
 
-//waypoint
+//schedule
 
-			
+$(".scheduleTitle").text("Schedule");

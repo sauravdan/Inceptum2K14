@@ -2,6 +2,7 @@ QueryLoader.init();
 
 $(document).ready(function () {
 
+$(".scheduleTitle").text("Schedule");
 $("img.lazy").lazyload();
 
 //**************************************//
