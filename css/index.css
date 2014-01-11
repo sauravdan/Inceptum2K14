@@ -225,7 +225,7 @@
 .menuHome{
 	background:url(../img/home.png) no-repeat;
 	background-size:contain;
-	background-color:#069ad5 !important;
+	background-color:#3cb5a2 !important;
 }
 .menuHome:hover{
 	background:url(../img/home_b.png) no-repeat;
@@ -267,7 +267,7 @@
 .menuReachus{
 	background:url(../img/reachus.png) no-repeat;
 	background-size:contain;
-	background-color:#3cb5a2 !important;
+	background-color:#3c81b5 !important;
 }
 .menuReachus:hover{
 	background:url(../img/reachus_b.png) no-repeat;

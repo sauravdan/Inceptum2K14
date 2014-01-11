@@ -1,3 +1,5 @@
+//Error Handling 
+window.onerror = function (mesg, url, num) {;return true;}
 
  var hexaDemo1;
             text1 = 'INCEPTUM'.split(''),//ιηςερτμɱ
@@ -70,6 +72,7 @@
         }, false);
 		
 		
+//map
 $(".mapMap").gmap3({ 
   getroute:{
     options:{
@@ -135,3 +138,9 @@ $(".mapMap").gmap3({
   }
   
 });
+
+
+
+//waypoint
+
+			

@@ -174,7 +174,7 @@ li {list-style:none;}
 #intro h1 {color:#FFF;font-size:48px;text-align:center;font-family:Knockout;text-transform:uppercase;font-weight:400;letter-spacing:5px;}
 #intro .def {opacity:0.2;filter:alpha(opacity=20);zoom:1;color:#e7e7e7;padding:20px;bottom:10px;width:35%;margin:0 auto;font-family:Droid Serif;}
 
-#presentation {background-color:#3cb5a2;overflow:hidden;position:relative;}
+#presentation {background-color:#30b71d;overflow:hidden;position:relative;}
 #presentation .svg {float:left;width:50%;margin-left:5%;}
 #presentation .legend {position:absolute;bottom:0;background: rgb(65, 146, 129);width:668px;padding:0 10px;background:rgba(63, 143, 128, 0.4);}
 #presentation .legend .title-top {text-transform:uppercase;color:#15435e;font-size:14px;margin-bottom:5px;}
@@ -189,7 +189,7 @@ li {list-style:none;}
 #presentation .legend .tags li:hover {background-color:#f2eee5;color:#000;-webkit-transition: background 0.5s linear;-moz-transition: background 0.5s linear;-o-transition: background 0.5s linear;transition: background 0.5s linear;}
 #presentation #canvas {width:100%;}
 
-#timeline {background-color:#0c486c;overflow:hidden;}
+#timeline {background-color:#fc5215;overflow:hidden;}
 #timeline .content .text {float:none;width:28%;}
 #timeline li {float:left;}
 #timeline .text .title {margin-bottom:1%}
