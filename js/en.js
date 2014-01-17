@@ -10,7 +10,7 @@ $(document).ready(function() {
 		year = (year.getFullYear()-2010);
 		month = month-6;
 	}
-	$('#timeline .text p.title').html('Nous avons '+year+' ans et '+month+' mois');
+	$('#timeline .text p.title').html('Events Date and Timing');
 	
 });
 
