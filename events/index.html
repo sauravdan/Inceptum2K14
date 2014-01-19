@@ -359,9 +359,10 @@
 									
 								
 								<!-- snap shot-->
-									<div class="uc-container">
+								<div class="uc-container">
+									<div class="uc-initial-content">
 										<img src="images/thumbs/snapshot.jpg" />
-										<span class="icon-eye" data-name="Snapshot"></span>
+										<span class="icon-eye" data-name="Snap Shot"></span>
 									</div>
 									<div class="uc-final-content">
 										<img src="images/large/snapshot.jpg" alt="image01-large" />
@@ -373,8 +374,7 @@
 										
 										<span class="icon-cancel"></span>
 									</div>
-								</div> 
-								
+								</div>
 								
 					
 					
@@ -737,7 +737,8 @@
 			function display(type,evnt){
 			
 			//how to display info and stuff
-				alert("Type:"+type+"  Event:"+evnt);		
+				window.open("pdf/"+evnt+"_"+type+".pdf");
+				//alert("Type:"+type+"  Event:"+evnt);		
 			
 			}
 		</script>
