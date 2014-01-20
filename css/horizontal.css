@@ -2,6 +2,12 @@ body { background: #e8e8e8; }
 .container { margin: 0 auto; }
 
 /* Example wrapper */
+.daddyWrap {
+	position: relative;
+	width:90%;
+	left:5%;
+	overflow:hidden:
+}
 .wrap {
 	position: relative;
 	bottom:50px;
