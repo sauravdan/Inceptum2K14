@@ -4,37 +4,89 @@ body { background: #e8e8e8; }
 /* Example wrapper */
 .wrap {
 	position: relative;
+	bottom:50px;
 	margin: 3em 0;
 }
 
 /* Frame */
 .frame {
-	height: 250px;
-	line-height: 250px;
+	height: 200px;
 	overflow: hidden;
 }
 .frame ul {
 	list-style: none;
-	margin: 0;
-	padding: 0;
+	margin: 0px 0px 0px 0px !important;
+	padding: 0px 0px 0px 0px !important;
 	height: 100%;
-	font-size: 50px;
 }
+
 .frame ul li {
+	top:25px;
 	float: left;
-	width: 227px;
-	height: 100%;
-	margin: 0 1px 0 0;
-	padding: 0;
-	background: #333;
-	color: #ddd;
-	text-align: center;
+	width: 400px;
+	height: 150px;
+	margin: 0px 0px 0px 0px;
+	padding: 2px 2px 2px 2px;
+	background: rgba(0, 0,0, 0.6);
+	color:#fff;
+	text-align: left;
+	cursor: pointer;
+	border:2px #000 solid;
+}
+.frame ul li img{
+	height:150px;
+	width:200px;
+	top:0px;
+	left:0px;
+	float:left;
 	cursor: pointer;
 }
-.frame ul li.active {
-	color: #fff;
-	background: #a03232;
+
+.frame ul li h1{
+	color:#00CFFC !important;
+	font-weight:bold !important;
+	vertical-align:top;
+	line-height:0px;
 }
+
+.frame ul li h4{
+	text-align:center;
+}
+.frame ul li h4 font{
+	color:#fff;
+}
+.frame ul li h4 font:hover{
+	color:#00CFFC !important;
+}
+
+.frame ul li span{
+	font-size:14px;
+	text-align:left;
+	margin-left:10px;
+	vertical-align:top;
+	line-height:0px;
+}
+
+.frame ul li a{
+	display:none;
+}
+
+.frame ul li.active a{
+	display:block;
+	font-size:16px;
+	font-weight:bold;
+	color:#fc5215;
+	float:right;
+}
+.frame ul li.active a:hover{
+	font-size:18px;
+}
+
+.frame ul li.active {
+	background:url(../img/evbg.jpg);
+/*	background:rgba(252, 82, 21, 0.5);*/
+}
+
 
 /* Scrollbar */
 .scrollbar {
@@ -87,7 +139,7 @@ body { background: #e8e8e8; }
 .controls { margin: 25px 0; text-align: center; }
 
 /* One Item Per Frame example*/
-.oneperframe { height: 300px; line-height: 300px; }
+.oneperframe { height: 300px; }
 .oneperframe ul li { width: 1140px; }
 .oneperframe ul li.active { background: #333; }
 
@@ -99,7 +151,6 @@ body { background: #e8e8e8; }
 /* Effects */
 .effects {
 	height: 200px;
-	line-height: 200px;
 	-webkit-perspective: 800px;
 	-ms-perspective: 800px;
 	perspective: 800px;
