@@ -74,8 +74,7 @@
 										<img src="images/large/deathrace.jpg" alt="image01-large" />
 										<div class="title" style="direction:ltr;">
 											<div class="myButton" onclick="display('details','deathrace');">Details</div>
-											<div class="myButton" onclick="display('rules','deathrace');">Rules</div>
-											<div class="myButton" onclick="display('contact','deathrace');">Contact</div>
+											<div class="myButton" onclick="display('reg','deathrace');">Register Now</div>
 										</div>
 										
 										<span class="icon-cancel"></span>
@@ -737,7 +736,10 @@
 			function display(type,evnt){
 			
 			//how to display info and stuff
-				window.open("pdf/"+evnt+"_"+type+".pdf");
+				if(type=="reg"){
+					window.open("register");
+				}
+				else window.open("pdf/"+evnt+"_"+type+".pdf");
 				//alert("Type:"+type+"  Event:"+evnt);		
 			
 			}
