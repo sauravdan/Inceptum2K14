@@ -77,15 +77,19 @@ body { background: #e8e8e8; }
 	display:none;
 }
 
+.reg:hover{
+	-webkit-transform:scale(1.1);
+	/*background:url(../img/register.png);*/
+}
 .frame ul li.active a{
 	display:block;
-	font-size:16px;
+	font-size:18px;
 	font-weight:bold;
 	color:#fc5215;
-	float:right;
+	text-align:center;
 }
 .frame ul li.active a:hover{
-	font-size:18px;
+	font-size:20px;
 }
 
 .frame ul li.active {
