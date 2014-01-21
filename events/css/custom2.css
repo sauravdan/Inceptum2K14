@@ -37,6 +37,7 @@
 .demo-2 .grid {
     width: 460px;
     margin: 30px auto;
+	margin-top: -40px;
 }
 
 .demo-2 .uc-container {
