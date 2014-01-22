@@ -754,8 +754,10 @@
 			function display(type,evnt){
 			
 			//how to display info and stuff
+				
 				if(type=="reg"){
-					window.open("/register");
+					if(evnt=="androidapp")window.open("https://docs.google.com/forms/d/1LCvrfKakG0yLZRNwb-9UMbEriri2Il9SzQHO5KwpRrY/viewform");
+					else window.open("/register");
 				}
 				else window.open("pdf/"+evnt+"_"+type+".pdf");
 				//alert("Type:"+type+"  Event:"+evnt);		
