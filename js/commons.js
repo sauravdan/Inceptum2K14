@@ -184,19 +184,7 @@ function reflow(){
 			});
 		});
 	}
-	// Get the shit done with ie
-	if(($.browser.msie)&&($.browser.version<=8)&&(height<700||width<1024)){
-		$('body').css({"font-size":11});
-		$('#navigation,#intro .def').css({"display":"none"});
-		$("#main .content .text").css({"line-height":"18px"});
-		$("#main .text .title, #thoughts .right .title").css({"font-size":34,"margin":"0px 0 4% 0"});
-		$("#works .works-list li .title").css({"font-size":14});
-		$("#thoughts .articles li.post-1, #thoughts .articles li.post-2").css({"border":"none"});
-		$("#thoughts .articles li.post-3, #thoughts .articles li.post-4").css({"display":"none"});
-		$("#thoughts .text .follow").css({"margin": "0px 0 3% 10px"});
-		$("#navigation .buttons div div p").css({"overflow":"hidden","margin": "13px 0"});
-	}
-
+	
 	// Compute de size of the navigation
 	$('#navigation .logo img').css({
 		"width":(menuWidth*0.7)
@@ -260,15 +248,9 @@ function reflow(){
 		height: tableSize
 	})
 	$("#thetimeline #elements > table").css("width",$('#thetimeline .events > td').length*(tableSize*4));
-	if ($.browser.mozilla){
-		$("#thetimeline div.categ > div").css("height",(tableSize*5)-1);
-	}else if($.browser.webkit){
-		$("#thetimeline div.categ > div").css("height",($("table.big-table").height()/5)-1);
-	}else if($.browser.msie){
-		$("#thetimeline div.categ > div").css("height",(tableSize*5)-3);
-	}else{
-		$("#thetimeline div.categ > div").css("height",(tableSize*5));
-	}
+	
+	$("#thetimeline div.categ > div").css("height",(tableSize*5));
+	
 	$('#thetimeline  .legend').css({"width":$("#thetimeline div#elements").width()+28});
 
 	// works

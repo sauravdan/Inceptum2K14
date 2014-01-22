@@ -185,6 +185,27 @@
        <section id="intro">
 		<div style="-webkit-filter: opacity(1);background:url(img/bg.png) repeat;position:fixed;top:0%;left:0%;width:100%;height:100%;">
 			<div class="college-logo"></div>
+			<h2 class="partnertitle" style="position:absolute;margin-left:17%;color:#000;text-align:left;width:300px;"> </h2>
+		
+			<div class="partners">
+				<a href="" targe=_blank><img src="img/t.png" data-title="Media Partners" style="margin-left:10px;"/></a>
+				<a href="http://www.go4tech.in/" target=_blank><img  src="img/g.png" data-title="Workshop Partners" style="margin-left:80px;"/></a>
+				<a href="http://www.instavoice.com/" target=_blank><img src="img/i.png" data-title="Sponsors"  style="margin-left:150px;"/></a>
+				
+		
+			</div>
+			<script>
+				$(document).ready(function(){
+					$(".partners>a>img").mouseover(function(){
+						
+						$(".partnertitle").text( $(this).attr("data-title"));
+						$(".partnertitle").animate({"opacity":"1"},1000).animate({"opacity":"0"},300);
+						
+						
+					});
+				
+				});
+			</script>
 			<a href="registration" target="_blank" ><img class="reg" src="img/register2.png" style="cursor:pointer;width:250px;position:fixed;float:right;margin-left:70%;margin-top:260px;"></a>
 			<a href="https://www.facebook.com/inceptumtechfest" target="_blank" ><img class="reg" src="img/likeus.png" style="cursor:pointer;width:250px;position:fixed;float:right;margin-left:10%;margin-top:250px;"></a>
 			<h1 class="tlt" style="color:#000;margin-top:380px;width:100%;text-align:center;font-size:500%;">
@@ -346,10 +367,10 @@
 .scrollit {
     overflow-y:scroll;
 	overflow-x:hidden;
-    height:550px;
+    height:520px;
 }
 </style>
-<img src="http://tvpowerplay.com/comingsoon.jpg" style="position:relative;width:100%"/>
+<img src="img/schedule.jpg" style="position:relative;height:100%;left:200px;"/>
 <table class="tftable" border="1" id="tableID">
 <tr><th>Events</th><th>Day</th><th>Timing</th></tr>
 <tr><td>Robo Soccer</td><td>03/02/2014</td><td>Coming Soon</td></tr>

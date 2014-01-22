@@ -25,6 +25,25 @@
 
 
 
+.partners{
+	position:absolute;
+	float:left;
+	left:15%;
+	top:40px;
+	z-index:1000;
+}
+.partners img{
+	position:absolute;
+	cursor:pointer;
+	height:50px;
+	width:50px;
+}
+
+
+.partners img:hover{
+	height:55px;
+	width:55px;
+}
 
 .college-logo{
 	background:url(../img/college-logo.png) no-repeat;
